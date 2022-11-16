@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+table {
+  box-sizing: border-box;
+  text-align: center;
+}
+thead th {
+  background: red;
+  color: white;
+  margin-right: 5px;
+}
+tbody td {
+  background: rgba(128, 128, 128, 0.479);
+  align-items: center;
+}

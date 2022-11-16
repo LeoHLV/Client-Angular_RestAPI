@@ -1,0 +1,19 @@
+<section *ngIf="client">
+  <h2>{{client.firstName}} {{client.lastName}}</h2>
+
+   <div>
+    First Name:
+    <input [(ngModel)]="client.firstName" placeholder="FirstName"/>
+  </div>
+  <div>
+    Last Name:
+    <input [(ngModel)]="client.lastName" placeholder="LastName"/>
+  </div>
+  <div>
+    Place:
+    <input [(ngModel)]="client.place" placeholder="Place"/>
+  </div>
+  <button (click)="createClient(client)" *ngIf="!client.id">Create</button>
+  <button (click)="updateClient(client)" *ngIf="client.id">Update</button>
+  <button (click)="deleteClient(client)" *ngIf="client.id">Delete</button>
+</section>

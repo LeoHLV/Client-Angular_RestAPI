@@ -1,0 +1,23 @@
+<button (click)="initNewClient()">Create New Client</button>
+
+<table>
+  <thead>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Place</th>
+    <th></th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor='let client of clientComponent'>
+      <td>{{client.firstName}}</td>
+      <td>{{client.lastName}}</td>
+      <td>{{client.place}}</td>
+      <td><button (click)="editClient(client)">Edit</button></td>
+    </tr>
+</table>
+
+<app-edit-client
+  [client]="clientToEdit"
+  (clientsUpdated)="updateClientList($event)"
+></app-edit-client>
